@@ -8,7 +8,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Cubiche\Domain\EventSourcing\Metadata\Annotations;
+namespace Cubiche\Core\Metadata\Tests\Fixtures\Metadata\Annotations;
 
 use Doctrine\Common\Annotations\Annotation;
 
@@ -20,6 +20,10 @@ use Doctrine\Common\Annotations\Annotation;
  * @Annotation
  * @Target("CLASS")
  */
-final class Migratable extends Annotation
+final class Projection extends Annotation
 {
+    /**
+     * @var string
+     */
+    public $targetClass;
 }

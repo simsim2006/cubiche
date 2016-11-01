@@ -8,18 +8,22 @@
  * file that was distributed with this source code.
  */
 
-namespace Cubiche\Domain\EventSourcing\Metadata\Annotations;
+namespace Cubiche\Core\Metadata\Tests\Fixtures\Metadata\Annotations;
 
 use Doctrine\Common\Annotations\Annotation;
 
 /**
- * Projection class.
+ * Property class.
  *
  * @author Ivannis Suárez Jerez <ivannis.suarez@gmail.com>
  *
  * @Annotation
- * @Target("CLASS")
+ * @Target("PROPERTY")
  */
-final class Migratable extends Annotation
+final class Property extends Annotation
 {
+    /**
+     * @var string
+     */
+    public $projectionName;
 }

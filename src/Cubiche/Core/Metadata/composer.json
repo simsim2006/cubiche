@@ -20,10 +20,10 @@
         }
     ],
     "require": {
-        "php":                      "^5.5.9|^7.0",
+        "php":                  "^5.5.9|^7.0",
 
-        "jms/metadata":             "~1.1",
-        "doctrine/common":          "2.6.1"
+        "jms/metadata":         "~1.1",
+        "doctrine/common":      "2.6.1"
     },
     "require-dev": {
         "cubiche/tests":        "dev-master"

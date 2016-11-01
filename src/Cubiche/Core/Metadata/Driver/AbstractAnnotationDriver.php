@@ -7,6 +7,7 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
+
 namespace Cubiche\Core\Metadata\Driver;
 
 use Cubiche\Core\Metadata\Exception\MappingException;
@@ -69,6 +70,14 @@ abstract class AbstractAnnotationDriver implements AdvancedDriverInterface
     public function addPaths(array $paths)
     {
         $this->paths = array_unique(array_merge($this->paths, $paths));
+    }
+
+    /**
+     * @return array
+     */
+    public function paths()
+    {
+        return $this->paths;
     }
 
     /**

@@ -7,6 +7,7 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
+
 namespace Cubiche\Core\Metadata\Driver;
 
 use Metadata\Driver\AbstractFileDriver;
@@ -32,6 +33,22 @@ abstract class AbstractXmlDriver extends AbstractFileDriver
         }
 
         return $mapping;
+    }
+
+    /**
+     * @param string $className
+     * @param string $file
+     *
+     * @return null|\SimpleXMLElement
+     */
+    protected function getMapping($className, $file)
+    {
+        $result = $this->loadMappingFile($file);
+        if (isset($result[$className])) {
+            return $result[$className];
+        }
+
+        return;
     }
 
     /**

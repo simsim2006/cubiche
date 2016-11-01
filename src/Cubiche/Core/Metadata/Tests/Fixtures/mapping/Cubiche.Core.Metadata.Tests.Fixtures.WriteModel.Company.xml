@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<projection-mapping>
+    <projection name="Cubiche\Core\Metadata\Tests\Fixtures\WriteModel\Company" targetClass="DDD\UI\ReadModel\Company">
+        <field name="id" projectionName="companyId" />
+        <field name="name" projectionName="companyName" />
+    </projection>
+</projection-mapping>
